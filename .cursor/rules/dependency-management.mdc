@@ -1,0 +1,16 @@
+---
+alwaysApply: true
+description: 依存関係管理に関するルール
+---
+
+# 依存関係管理
+
+このプロジェクトの依存関係管理について。
+
+- パッケージの追加は [pyproject.toml](mdc:pyproject.toml) に記述
+- インストールは `uv sync` または `uv add` を使用
+
+## 参考ファイル
+
+- 依存関係設定: [pyproject.toml](mdc:pyproject.toml)
+- ロックファイル: [uv.lock](mdc:uv.lock)

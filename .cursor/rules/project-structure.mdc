@@ -1,0 +1,22 @@
+---
+alwaysApply: true
+description: プロジェクト構造に関するルール
+---
+
+# プロジェクト構造
+
+このプロジェクトの構造について。
+
+- すべてのPythonコードは `src/` ディレクトリに配置
+- LangGraphに関連するコードは適切にモジュール化する
+
+## 主要ディレクトリ
+
+- **src/**: すべてのPythonコードの配置場所
+- **src/langgraph_rag/**: LangGraphに関連するコード
+  - [src/langgraph_rag/langgraph_rag.py](mdc:src/langgraph_rag/langgraph_rag.py): メインワークフロー
+  - [src/langgraph_rag/nodes/](mdc:src/langgraph_rag/nodes/): ノード定義
+  - [src/langgraph_rag/routers/](mdc:src/langgraph_rag/routers/): ルーティング定義
+  - [src/langgraph_rag/state.py](mdc:src/langgraph_rag/state.py): 状態管理
+- **src/rag/**: RAG関連のユーティリティ
+- **docs/**: 検証用のサンプルドキュメント

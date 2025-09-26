@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+description: Python実行とuv使用に関するルール
+---
+
+# Python実行について
+
+このプロジェクトではPythonスクリプトの実行に `uv run` を使用すること。
+
+- 直接 `python` や `python3` コマンドは使用せず、必ず `uv run python` を使用する
+- 例: `uv run python src/rag_ingest.py`
