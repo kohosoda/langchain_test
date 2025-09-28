@@ -76,10 +76,10 @@ graph TD;
 	__start__([<p>__start__</p>]):::first
 	classify(["classify<br/>質問の分類を行う"])
 	retrieve(["retrieve<br/>関連ドキュメントを検索する"])
-	grade(["grade<br/>検索されたドキュメントの関連性を評価する"])
-	generate(["generate<br/>回答文を生成する"])
-	check(["check<br/>回答の整合性を検証する"])
-	finalize(["finalize<br/>最終的なレスポンスを整形する"])
+	grade(["grade<br/>検索された各ドキュメントの関連性を評価する"])
+	generate(["generate<br/>関連あると判定されたドキュメントを基に回答文を生成する"])
+	check(["check<br/>生成された回答の妥当性を検証する"])
+	finalize(["finalize<br/>最終的な回答を決定する"])
 	__end__([<p>__end__</p>]):::last
 	__start__ --> classify;
 	check --> finalize;
@@ -100,8 +100,8 @@ graph TD;
 
 - **質問分類 (classify)**: 入力された質問がRAGで処理可能かを判定
 - **ドキュメント検索 (retrieve)**: ChromaDBから関連文書を検索
-- **関連性評価 (grade)**: 検索された文書の関連性を評価
-- **回答生成 (generate)**: 関連文書を基に回答を生成
+- **関連性評価 (grade)**: 検索された各ドキュメントの関連性を評価
+- **回答生成 (generate)**: 関連あると判定されたドキュメントを基に回答を生成
 - **ハルシネーション検証 (check)**: 生成された回答の妥当性を検証
 - **最終処理 (finalize)**: 最終的な回答を決定
 
