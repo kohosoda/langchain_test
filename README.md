@@ -74,12 +74,12 @@ config:
 ---
 graph TD;
 	__start__([<p>__start__</p>]):::first
-	classify(classify)
-	retrieve(retrieve)
-	grade(grade)
-	generate(generate)
-	check(check)
-	finalize(finalize)
+	classify(["classify<br/>質問の分類を行う"])
+	retrieve(["retrieve<br/>関連ドキュメントを検索する"])
+	grade(["grade<br/>検索されたドキュメントの関連性を評価する"])
+	generate(["generate<br/>回答文を生成する"])
+	check(["check<br/>回答の整合性を検証する"])
+	finalize(["finalize<br/>最終的なレスポンスを整形する"])
 	__end__([<p>__end__</p>]):::last
 	__start__ --> classify;
 	check --> finalize;
